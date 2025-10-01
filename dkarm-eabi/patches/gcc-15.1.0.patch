@@ -154,8 +154,6 @@ index fdfdf9c580b..add129f0a62 100644
 -MULTILIB_REUSE	     += mthumb/mfpu.auto/march.armv7+fp/mfloat-abi.hard=mthumb/march.armv7+fp/mfloat-abi.hard
 -MULTILIB_REUSE	     += mthumb/mfpu.auto/march.armv7+fp/mfloat-abi.hard=mfpu.auto/march.armv7+fp/mfloat-abi.hard
 -MULTILIB_REUSE	     += mthumb/mfpu.auto/march.armv7+fp/mfloat-abi.hard=march.armv7+fp/mfloat-abi.hard
-+
-
 diff --git a/gcc/config/arm/unknown-elf.h b/gcc/config/arm/unknown-elf.h
 index ab3918283d8..c14a1955cad 100644
 --- a/gcc/config/arm/unknown-elf.h
