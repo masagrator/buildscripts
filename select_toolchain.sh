@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=0
+VERSION=1
 case "$BUILD_DKPRO_PACKAGE" in
   "1" )
     VERSION=1
