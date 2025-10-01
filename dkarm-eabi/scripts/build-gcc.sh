@@ -42,8 +42,8 @@ if [ ! -f configured-gcc ]
 then
 	CPPFLAGS="$cppflags $CPPFLAGS" \
 	LDFLAGS="$ldflags $LDFLAGS" \
-	CFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections" \
-	CXXFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections" \
+	CFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections -fPIC" \
+	CXXFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections -fPIC" \
 	LDFLAGS_FOR_TARGET="" \
 	../../gcc-$GCC_VER/configure \
 		--enable-languages=c,c++,objc,lto \
@@ -103,7 +103,7 @@ cd $target/newlib
 
 if [ ! -f configured-newlib ]
 then
-	CFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections" \
+	CFLAGS_FOR_TARGET="-O2 -ffunction-sections -fdata-sections -fPIC" \
 	../../newlib-$NEWLIB_VER/configure \
 	--disable-newlib-supplied-syscalls \
 	--enable-newlib-mb \
