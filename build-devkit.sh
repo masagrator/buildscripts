@@ -100,7 +100,7 @@ INSTALLDIR=/opt/devkitpro
 [ ! -z "$INSTALLDIR" ] && mkdir -p $INSTALLDIR && touch $INSTALLDIR/nonexistantfile && rm $INSTALLDIR/nonexistantfile || exit 1;
 
 if test "`wget -V`"; then
-	FETCH="wget --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64)'"
+	FETCH="wget - q --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64)'"
 elif test "`curl -V`"; then
 	FETCH="curl --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' -f -L -O"
 else
