@@ -81,8 +81,8 @@ index fdfdf9c580b..add129f0a62 100644
 -
 -MULTILIB_OPTIONS     =
 -MULTILIB_DIRNAMES    =
-+MULTILIB_OPTIONS     = mthumb mbig-endian march=armv6k march=armv6s-m mfloat-abi=hard mfloat-abi=soft
-+MULTILIB_DIRNAMES    = thumb be armv6k v6-m fpu nofp
++MULTILIB_OPTIONS     = mthumb mbig-endian march=armv6k march=armv6s-m march=armv8-a+crc mfloat-abi=hard mfloat-abi=soft fPIC
++MULTILIB_DIRNAMES    = thumb be armv6k v6-m armv8-a+crc fpu nofp pic
  MULTILIB_EXCEPTIONS  = 
  MULTILIB_MATCHES     =
 -MULTILIB_REUSE	     =
@@ -134,7 +134,7 @@ index fdfdf9c580b..add129f0a62 100644
 -			  march?armv7+fp=march?$(ARCH) \
 -			  $(foreach FPARCH, $(v8_fps), \
 -			    march?armv7+fp=march?$(ARCH)+$(FPARCH)))
-+MULTILIB_REQUIRED    = mthumb mbig-endian mthumb/mbig-endian march=armv6k/mfloat-abi=hard mthumb/march=armv6s-m/mfloat-abi=soft
++MULTILIB_REQUIRED    = mthumb mbig-endian mthumb/mbig-endian march=armv8-a+crc/mfloat-abi=hard/fpu/fPIC march=armv6k/mfloat-abi=hard mthumb/march=armv6s-m/mfloat-abi=soft
  
 -MULTILIB_MATCHES     += $(foreach ARCH, $(all_v9_archs), \
 -			  march?armv7+fp=march?$(ARCH) \
