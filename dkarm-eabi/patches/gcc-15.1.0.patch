@@ -143,7 +143,7 @@ index fdfdf9c580b..add129f0a62 100644
  
 -MULTILIB_MATCHES     += $(foreach ARCH, armv7e-m armv8-m.mainline, \
 -			  march?armv7+fp=march?$(ARCH)+fp.dp)
-+MULTILIB_MATCHES    += march?armv6k=mtune?mpcore
++MULTILIB_MATCHES    += fPIC=fpic fPIC=fpie fPIC=fPIE march?armv6k=mtune?mpcore
 +MULTILIB_MATCHES    += march?armv6k=mcpu?mpcore
  
 -# PART 4 - Reuse rules
